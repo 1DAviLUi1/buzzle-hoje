@@ -1,0 +1,467 @@
+@font-face {
+    font-family: buz1;
+    src: url(fonte/Itim-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr;
+    background-color: #e4e4e4;
+}
+
+header {
+    grid-area: header;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(#fdfdfd, #e4e4e4);
+}
+
+header section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#divlogo, #divperfil {
+    width: 20%;
+    height: 100%;
+}
+
+#divlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#divlogo img {
+    width: 15rem;
+}
+
+#divnav {
+    width: 60%;
+    height: 100%;
+}
+
+#divperfil {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#vaiamerda {
+    margin-right: 20%;
+}
+
+#divperfil div {
+    background-color: black;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+}
+
+aside {
+    grid-area: aside;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#e4e4e4, #fdfdfd, #fdfdfd, #fdfdfd, #fdfdfd);
+}
+
+#secnav{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navbut{
+    width: 290px;
+    height: 3rem;
+    background-color: #fdfdfd;
+    border: 0.25rem solid #e4e4e4;
+    border-radius: 5rem;
+    color: #3a1c12;
+    font-family: buz1;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navbut:hover{
+    filter: brightness(95%);
+    border: 0.25rem solid #ffda33;
+}
+
+#secturmas{
+    width: 100%;
+    height: 75%;
+}
+
+#astitulo{
+    text-align: center;
+    color: #3a1c12;
+    font-family: buz1;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#subsecturmas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.divtur{
+    width: 90%;
+    height: 4.5rem;
+    background-color: #fdfdfd;
+    border: 0.25rem solid #e4e4e4;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.divtur:hover{
+    filter: brightness(95%);
+    border: 0.25rem solid #ffda33;
+}
+
+main {
+    grid-area: main;
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    background-image: url(imagens/colmeianova.png);
+    border-radius: 2rem 0 0 0;
+}
+
+#fundo {
+    width: 100%;
+    height: 20rem;
+    background-image: linear-gradient(#e4e4e4, transparent, transparent, transparent, #fdfdfd);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#fundo button {
+    width: 25%;
+    height: 7rem;
+    border-radius: 2rem;
+    border: 0.25rem solid #e4e4e4;
+    background-color: #fdfdfd;
+    text-align: center;
+    font-size: 2.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #3a1c12;
+    font-family: buz1;
+}
+
+#fundo button:hover {
+    scale: 105%;
+    filter: brightness(97.5%);
+    border: 0.5rem solid #ffda33;
+}
+
+#secmain {
+    width: 100%;
+    height: calc(100% - 20rem);
+    background-color: #fdfdfd;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#secatvenv, #secatvenc{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#titulo{
+    color: #3a1c12;
+    font-family: buz1;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+#carrossel{
+    /*background-color: pink;*/
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#butao{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #afafaf;
+    cursor: pointer;
+    border: none;
+    background-color: #fdfdfd;
+    transition: 0.5s;
+}
+
+#butao:hover{
+    color: #ffda33;
+}
+
+#seccarrossel{
+    width: calc(100% - 8rem);
+    height: 100%;
+    /*background-color: purple;*/
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#secroladora{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /*background-color: plum;*/
+    gap: 1rem;
+}
+
+.divatv{
+    width: 15rem;
+    height: 15rem;
+    background-color: #fdfdfd;
+    border: 0.4rem solid #e4e4e4;
+    border-radius: 3rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.divatv:hover{
+    filter: brightness(95%);
+    border: 0.4rem solid #ffda33;
+}
+
+footer {
+    grid-area: footer;
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    background-image: linear-gradient(#fdfdfd, #e4e4e4);
+}
+
+#secfooter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#secfooter div{
+    width: 30%;
+    height: 100%;
+}
+
+.divfot{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divfot img{
+    height: 8rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: buz1;
+}
+
+.config-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.config-btn {
+    width: 290px;
+    height: 3rem;
+    background: #fdfdfd;
+    border-radius: 5rem;
+    border: 0.25rem solid #e4e4e4;
+    font-family: buz1;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+.config-btn:hover{
+
+ filter: brightness(95%);
+    border: 0.25rem solid #ffda33;
+
+}
+
+.config-menu {
+    position: absolute;
+    top: 100%;       /* <- DESCE O DROPDOWN */
+    left: 0;
+    width: 180px;
+    background: white;
+    border-radius: 15px;
+    padding: 10px 0;
+    display: none;   /* coméça escondido */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.config-menu button {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.config-menu button:last-child {
+    border-bottom: none;
+}
+
+
+/* ======================= DARK MODE COMPLETO ======================= */
+
+body.dark {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+/* Header, Aside, Main, Footer escuros */
+body.dark header,
+body.dark aside,
+body.dark footer {
+    background-image: none !important;
+    background-color: #2a2a2a !important;
+}
+
+/* Header com gradiente escuro */
+body.dark header {
+    background-image: linear-gradient(#2a2a2a, #1f1f1f) !important;
+}
+
+/* Aside com gradiente escuro */
+body.dark aside {
+    background-image: linear-gradient(#1f1f1f, #2a2a2a, #2a2a2a) !important;
+}
+
+/* Main com imagem dark */
+body.dark main {
+    background-image: url(imagens/colmeiadarkmode.png) !important;
+}
+
+/* Fundo do topo do main */
+body.dark #fundo {
+    background-image: linear-gradient(#1f1f1f, transparent, transparent, transparent, #2a2a2a) !important;
+}
+
+/* Caixas/botões claros → cinza */
+body.dark .navbut,
+body.dark .divtur,
+body.dark .divenv,
+body.dark .divenc,
+body.dark #fundo button {
+    background-color: #3a3a3a !important;
+    color: white !important;
+    border-color: #555 !important;
+}
+
+/* Hover amarelo */
+body.dark .navbut:hover,
+body.dark .divtur:hover,
+body.dark .divenv:hover,
+body.dark .divenc:hover,
+body.dark #fundo button:hover {
+    filter: brightness(120%) !important;
+    border-color: #ffda33 !important;
+}
+
+/* Títulos */
+body.dark #titulo,
+body.dark #astitulo {
+    color: white !important;
+}
+
+/* Carrossel botões */
+body.dark #butao {
+    background-color: #3a3a3a !important;
+    color: #fff !important;
+}
+
+body.dark #butao:hover {
+    color: #ffda33 !important;
+}
+
+/* CONFIG BUTTON */
+body.dark .config-btn {
+    background: #3a3a3a !important;
+    border-color: #555 !important;
+    color: white !important;
+}
+
+body.dark .config-btn:hover {
+    filter: brightness(120%);
+    border-color: #ffda33 !important;
+}
+
+/* CONFIG MENU */
+body.dark .config-menu {
+    background: #2a2a2a !important;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.15) !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark .config-menu button {
+    background: #2a2a2a !important;
+    color: white !important;
+    border-bottom: 1px solid #444 !important;
+}
+
+body.dark .config-menu button:hover {
+    background: #3a3a3a !important;
+}
